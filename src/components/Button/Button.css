@@ -8,6 +8,7 @@
     border: none;
     height: 35px;
     width: 135px;
+    cursor: pointer;
 }
 
 .submit-button:hover {

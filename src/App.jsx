@@ -14,10 +14,16 @@ function App() {
     setLoading(true);
     try {
       const response = await axios.get(`http://127.0.0.1:8000/article/?url=${articleUrl}`);
+      if (response.data['status_code'] == 200 ) {
       setTitle(response.data['title']);
       setSubtitle(response.data['subtitle']);
       setBody(response.data['body']);
+      } else {
+        console.log(response.data['status_code']);
+        console.log(response.data['message']);
+      }
     } catch (error) {
+      console.log("Request error");
       console.log(error);
     }
     setLoading(false);
@@ -35,7 +41,7 @@ function App() {
       </div>
       <div className='instructions-container'>
         <ul className='instructions-list'>
-          <li> Ingresa la URL del artículo del <a className='instructions-link' href="https://www.df.cl/"><strong><span className='title-highlight'>Diario</span> Financiero</strong></a></li>
+          <li> Ingresa la URL del artículo del <a className='instructions-link' href="https://www.df.cl/" target='_blank'><strong><span className='title-highlight'>Diario</span> Financiero</strong></a></li>
           <li> Presiona el botón para cargar el artículo</li>
         </ul>
       </div>
@@ -59,7 +65,11 @@ function App() {
       </div>
 
       {loading ? (
-        <p>Cargando...</p>
+        <>
+          <div className='loading-container'>
+            <p className='loading-message'>Cargando artículo...</p>
+          </div>
+        </>
       ) : (
         <>
           <div className='title-container'>
