@@ -1,0 +1,22 @@
+
+.submit-button {
+    font-family: 'Outfit';
+    font-size: 15px;
+    color: #000000;
+    background-color: #f87903;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 135px;
+}
+
+.submit-button:hover {
+    background-color: #ffa450;
+    transition: 1s;
+
+}
+
+.submit-button:active{
+    background-color: #ff7d03;
+    transition: 0s;
+}

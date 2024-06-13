@@ -10,10 +10,24 @@
     justify-content: center;
 }
 
+.title-highlight {
+    color: #f87903;
+}
+
+.instructions-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.instructions-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
     width: 100%;
     height: 100px;
 }
@@ -34,6 +48,7 @@
     border-radius: 5px;
     height: 25px;
     width: 300px;
+    border: none;
 }
 
 .form-button-container {

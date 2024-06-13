@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button } from './components/Button/Button';
 import './App.css';
 
 function App() {
@@ -30,7 +31,13 @@ function App() {
   return (
     <div className='main-content'>
       <div className='page-title-container'>
-        <h1 className='page-title-h1'>Diario Financiero</h1>
+        <h1 className='page-title-h1'><span className='title-highlight'>Diario</span> Financiero</h1>
+      </div>
+      <div className='instructions-container'>
+        <ul className='instructions-list'>
+          <li> Ingresa la URL del artículo del <a className='instructions-link' href="https://www.df.cl/"><strong><span className='title-highlight'>Diario</span> Financiero</strong></a></li>
+          <li> Presiona el botón para cargar el artículo</li>
+        </ul>
       </div>
       <div className='form-container'>
         <form onSubmit={handleSubmit}>
@@ -45,7 +52,7 @@ function App() {
               />
             </div>
             <div className='form-button-container'>
-              <button type="submit">Cargar Artículo</button>
+              <Button text="Cargar artículo"/>
             </div>
           </div>
         </form>
