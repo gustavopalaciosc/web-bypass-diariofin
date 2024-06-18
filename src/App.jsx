@@ -41,7 +41,7 @@ function App() {
       </div>
       <div className='instructions-container'>
         <ul className='instructions-list'>
-          <li> Ingresa la URL del artículo del <a className='instructions-link' href="https://www.df.cl/" target='_blank'><strong><span className='title-highlight'>Diario</span> Financiero</strong></a></li>
+          <li> Ingresa la URL del artículo del <a className='instructions-link' href="https://www.df.cl/" target='_blank'><strong><span className='title-highlight'>Diario</span> Financiero</strong></a> que contenga un paywall</li>
           <li> Presiona el botón para cargar el artículo</li>
         </ul>
       </div>
