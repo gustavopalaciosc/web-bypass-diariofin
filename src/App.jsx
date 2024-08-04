@@ -40,7 +40,7 @@ function App() {
         <h1 className='page-title-h1'><span className='title-highlight'>Diario</span> Financiero</h1>
       </div>
       <div className='instructions-container'>
-        <h2>Busca articulos bloqueados en el <a className='instructions-link' href="https://www.df.cl/" target='_blank'><span className='title-highlight'>Diario</span> Financiero</a> y leelos de manera gratuita.</h2>
+        <h2>Busca artículos bloqueados en el <a className='instructions-link' href="https://www.df.cl/" target='_blank'><span className='title-highlight'>Diario</span> Financiero</a> y leelos de manera gratuita.</h2>
         
       </div>
       <div className='form-container'>
