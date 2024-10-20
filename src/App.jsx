@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button } from './components/Button/Button';
 import './App.css';
+import LoadingWidget from './components/LoadingWidget/LoadingWidget';
 
 function App() {
   const [title, setTitle] = useState("");
@@ -65,13 +66,7 @@ function App() {
       {loading ? (
         <>
           <div className='loading-container'>
-            <div class="loadingspinner">
-              <div id="square1"></div>
-              <div id="square2"></div>
-              <div id="square3"></div>
-              <div id="square4"></div>
-              <div id="square5"></div>
-            </div>
+            <LoadingWidget />
           </div>
         </>
       ) : (
