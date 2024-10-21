@@ -64,12 +64,28 @@
 
 .body-container .article-paragraph {
     font-size: 18px;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .loading-container {
     display: flex;
     justify-content: center;
 }
+
+.font-size-slider {
+  margin: 20px 0;
+}
+
+.article-subtitle-h2 {
+  font-size: 24px;
+}
+
+
+.font-size-slider input[type="range"] {
+  width: 100%;
+}
+
 
 
 @media (max-width: 790px) {
@@ -90,7 +106,7 @@
     }
 
     .article-subtitle-h2 {
-        font-size: 15px;
+        font-size: 18px;
     }
 
 }
