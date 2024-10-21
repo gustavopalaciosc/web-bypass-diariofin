@@ -1,6 +1,6 @@
 
 .submit-button {
-    font-family: 'Outfit';
+    font-family: 'Outfit' ,Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: #000000;
     background-color: #f87903;
@@ -17,7 +17,3 @@
 
 }
 
-.submit-button:active{
-    background-color: #ff7d03;
-    transition: 0s;
-}

@@ -82,9 +82,87 @@
 }
 
 
-.font-size-slider input[type="range"] {
+/* Estilos generales */
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none; /* Eliminar el estilo por defecto de WebKit */
   width: 100%;
+  height: 8px;
+  background: #ddd; /* Color de la parte no seleccionada */
+  border-radius: 5px;
+  outline: none;
 }
+
+/* Personalizar el thumb (la bolita del control) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #f87903; /* Color del thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #f87903;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #f87903;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Personalizar la parte seleccionada del slider */
+
+/* WebKit (Chrome, Safari) */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #f87903 0%, #f87903 var(--percent), #ddd var(--percent), #ddd 100%);
+  border-radius: 5px;
+  height: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -4px; /* Ajuste vertical */
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  background: linear-gradient(to right, #f87903 0%, #f87903 var(--percent), #ddd var(--percent), #ddd 100%);
+  border-radius: 5px;
+  height: 8px;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: #f87903;
+}
+
+/* Internet Explorer y Edge */
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 8px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #f87903;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+
 
 
 

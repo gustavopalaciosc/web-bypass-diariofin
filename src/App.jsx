@@ -10,7 +10,7 @@ function App() {
   const [body, setBody] = useState([]);
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [fontSize, setFontSize] = useState(18); // Tamaño de la fuente por defecto
+  const [fontSize, setFontSize] = useState(18);
 
   const fetchArticle = async (articleUrl) => {
     setLoading(true);
@@ -20,6 +20,7 @@ function App() {
         setTitle(response.data['title']);
         setSubtitle(response.data['subtitle']);
         setBody(response.data['body']);
+        setUrl('');
       } else {
         console.log(response.data['status_code']);
         console.log(response.data['message']);
@@ -67,17 +68,19 @@ function App() {
         </form>
       </div>
 
-      {/* Slider para ajustar el tamaño de la fuente */}
       <div className='font-size-slider'>
         <label htmlFor="font-size-range">Tamaño de letra: {fontSize}px</label>
         <input
-          type="range"
-          id="font-size-range"
-          min="12"
-          max="36"
-          value={fontSize}
-          onChange={handleFontSizeChange}
-        />
+        type="range"
+        id="font-size-range"
+        min="18"
+        max="36"
+        value={fontSize}
+        onChange={handleFontSizeChange}
+        style={{
+          '--percent': `${((fontSize - 18) / (36 - 18)) * 100}%`
+        }}
+      />
       </div>
 
       {loading ? (
