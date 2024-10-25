@@ -24,7 +24,6 @@ function App() {
         setSubtitle(response.data['subtitle']);
         setBody(response.data['body']);
         setImageUrl(response.data['image_url'])
-        console.log(response.data['image_url']);
         setUrl('');
       } else {
         console.log(response.data['status_code']);
