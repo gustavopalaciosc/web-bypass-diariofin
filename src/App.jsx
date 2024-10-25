@@ -17,8 +17,8 @@ function App() {
     setLoading(true);
     setImageUrl('');
     try {
-      //const response = await axios.get(`https://backend-web-diariofin.onrender.com/article/?url=${articleUrl}`);
-      const response = await axios.get(`http://127.0.0.1:8000/article/?url=${articleUrl}`);
+      const response = await axios.get(`https://backend-web-diariofin.onrender.com/article/?url=${articleUrl}`);
+      //const response = await axios.get(`http://127.0.0.1:8000/article/?url=${articleUrl}`);
       if (response.data['status_code'] === 200 ) {
         setTitle(response.data['title']);
         setSubtitle(response.data['subtitle']);
