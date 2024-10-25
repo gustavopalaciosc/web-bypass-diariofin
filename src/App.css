@@ -162,6 +162,20 @@ input[type="range"]::-ms-fill-upper {
   border-radius: 5px;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.article-image {
+  width: 100%; /* Ajusta esto según el tamaño que desees */
+  max-width: 800px; /* Tamaño máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 10px 0; /* Espacio alrededor de la imagen */
+  display: block;
+  object-fit: cover;
+}
 
 
 

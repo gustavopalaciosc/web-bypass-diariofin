@@ -8,18 +8,23 @@ function App() {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [body, setBody] = useState([]);
+  const [imageUrl, setImageUrl] = useState("");
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [fontSize, setFontSize] = useState(18);
 
   const fetchArticle = async (articleUrl) => {
     setLoading(true);
+    setImageUrl('');
     try {
-      const response = await axios.get(`https://backend-web-diariofin.onrender.com/article/?url=${articleUrl}`);
+      //const response = await axios.get(`https://backend-web-diariofin.onrender.com/article/?url=${articleUrl}`);
+      const response = await axios.get(`http://127.0.0.1:8000/article/?url=${articleUrl}`);
       if (response.data['status_code'] === 200 ) {
         setTitle(response.data['title']);
         setSubtitle(response.data['subtitle']);
         setBody(response.data['body']);
+        setImageUrl(response.data['image_url'])
+        console.log(response.data['image_url']);
         setUrl('');
       } else {
         console.log(response.data['status_code']);
@@ -96,6 +101,11 @@ function App() {
             <h2 className='article-subtitle-h2' >{subtitle}</h2>
           </div>
           <hr />
+          {imageUrl && (
+            <div className='image-container'>
+              <img src={imageUrl} alt="Article visual" className='article-image' />
+            </div>
+          )}
           <div className='body-container'>
             {body.map((paragraph, index) => (
               <p className='article-paragraph' style={{ fontSize: `${fontSize}px` }} key={index}>{paragraph}</p>
