@@ -1,13 +1,14 @@
 
 .submit-button {
-    font-family: 'Outfit' ,Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
     color: #000000;
     background-color: #f87903;
     border-radius: 5px;
     border: none;
     height: 35px;
-    width: 165px;
+    width: 175px;
     cursor: pointer;
 }
 
