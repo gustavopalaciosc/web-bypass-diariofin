@@ -4,10 +4,10 @@ Simple web application that allows users to read paywalled articles from [Diario
 
 ## Setup
 
-```bash
+```
 npm install
 npm run dev
-
+```
 
 ## Technologies Used
 
