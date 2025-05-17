@@ -1,12 +1,15 @@
 # Frontend Free Diario Financiero
-Aplicación web que permite leer los artículos del [Diario Financiero](https://www.df.cl/) que estén bloqueados con paywalls. Desde la aplicación web se envía la url del artículo de interes al [Backend](https://github.com/gustavopalaciosc/backend-web-diariofin), donde es procesada, obteniendo el título, subtítulo y cuerpo del artículo, los cuales son renderizados en el frontend.
+
+Simple web application that allows users to read paywalled articles from [Diario Financiero](https://www.df.cl/). The web app sends the URL of the desired article to the [Backend](https://github.com/gustavopalaciosc/backend-web-diariofin), where it is processed to extract the title, subtitle, and body content, which are then rendered in the frontend.
 
 ## Setup
-```
+
+```bash
 npm install
 npm run dev
-```
 
 
+## Technologies Used
 
+[React](https://reactjs.org/).
 
